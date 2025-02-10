@@ -48,3 +48,15 @@ function calculateSubscriptionCost(plan, months, discount = 0)
 }; 
 calculateSubscriptionCost("Basic", 6, 10); //test data that'll produce 'Total Cost: $50'
 calculateSubscriptionCost("Premium", 12, 0); //test data that'll produce 'Total Cost: $240'
+
+//Task 5 - Currency Conversion
+//declaring a function that will conver currency and return its new converted amount
+function convertCurrency(amount, exchangeRate) 
+{
+    let convertedAmount = amount * exchangeRate;//multiplying the amount and exchnage rate to get the converted amount 
+    console.log(`Converted Amount: $${convertedAmount.toFixed(2)}`); 
+    return convertedAmount; 
+}; 
+convertCurrency(100, 1.1); //test data that should produce a converted amount of $110.00
+convertCurrency(250, 0.85); //test data that should produce a converted amount of $212.50
+
