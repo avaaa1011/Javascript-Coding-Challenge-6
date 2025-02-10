@@ -30,3 +30,21 @@ const calculateBonus = (salary, performanceRating) =>
 }
 calculateBonus(5000, "Excellent"); //test data should should produce expected bonus of $1000
 calculateBonus(7000, "Good"); //test data should produce expected bonus of $700
+
+//Task 4 - Subscription Pricing Model 
+//declaring a function that will calculate a subscription's cost based on different packages 
+function calculateSubscriptionCost(plan, months, discount = 0)
+{//if loop that determines the cost of your subscription based on your type of subscription
+    if (plan === "Basic") { //If you have a Basic plan the cost is $10
+        cost = 10
+    } else if (plan === "Premium") { // If you have a Premium plan the cost is $20
+        cost = 20
+    } else if (plan === "Enterprise") { //If you have a Enterprise plan the cost is $30
+        cost = 30
+    }; 
+    let totalCost = (cost * months) - discount; 
+    console.log(`Total Cost: $${totalCost}`); 
+    return totalCost; 
+}; 
+calculateSubscriptionCost("Basic", 6, 10); //test data that'll produce 'Total Cost: $50'
+calculateSubscriptionCost("Premium", 12, 0); //test data that'll produce 'Total Cost: $240'
